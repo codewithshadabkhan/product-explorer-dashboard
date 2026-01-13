@@ -1,5 +1,5 @@
 # 🛍️ Product Explorer Dashboard
-
+🔗 **Live Demo:** [https://product-explorer.vercel.app  ](https://product-explorer-dashboard-02.vercel.app/)
 A modern **Product Explorer Dashboard** built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS v4**.  
 This project demonstrates real-world frontend architecture, clean UI patterns, and production-ready features.
 
