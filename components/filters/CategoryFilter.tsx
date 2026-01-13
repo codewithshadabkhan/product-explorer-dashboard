@@ -11,7 +11,7 @@ export default function CategoryFilter({ products, onChange }: Props) {
   return (
     <select
       onChange={(e) => onChange(e.target.value)}
-      className="w-full md:w-1/3 rounded-2xl shadow-md  dark:border p-2"
+      className="rounded-2xl shadow-md  dark:border p-2"
     >
       <option value="all">All Categories</option>
       {categories.map((category) => (
