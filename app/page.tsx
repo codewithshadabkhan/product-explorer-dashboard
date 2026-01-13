@@ -67,7 +67,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="max-w-7xl mx-auto p-4">
+    <main className="max-w-7xl mx-auto p-4 mt-10 ">
       <div className="mb-6 flex flex-col md:flex-row gap-4 justify-center items-center">
         <SearchBar value={search} onChange={setSearch} />
         <CategoryFilter products={products} onChange={setCategory} />

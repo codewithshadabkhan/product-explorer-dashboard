@@ -16,7 +16,7 @@ export default function ProductCard({ product }: Props) {
   const isFavorite = favorites.includes(product.id);
 
   return (
-    <div className="flex flex-col rounded shadow-md hover:shadow-lg p-4">
+    <div className="flex flex-col rounded shadow-md hover:shadow-lg  p-4 dark:border">
       <button
         onClick={() => toggleFavorite(product.id)}
         className="mt-2 text-sm text-blue-600 cursor-pointer flex justify-end"
