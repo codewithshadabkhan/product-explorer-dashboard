@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { fetchProductById, fetchProducts } from "@/lib/api";
 
+export const dynamic = "force-dynamic";
 interface Props {
   params: Promise<{ id: string }>;
 }
