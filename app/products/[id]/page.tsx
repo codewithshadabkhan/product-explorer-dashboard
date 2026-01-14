@@ -1,18 +1,12 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { fetchProductById, fetchProducts } from "@/lib/api";
+import { fetchProductById } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
 interface Props {
   params: Promise<{ id: string }>;
 }
-export async function generateStaticParams() {
-  const products = await fetchProducts();
 
-  return products.map((product) => ({
-    id: String(product.id),
-  }));
-}
 export default async function ProductDetailsPage({ params }: Props) {
   const { id } = await params;
 
