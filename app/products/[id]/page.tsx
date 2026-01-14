@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { fetchProductById } from "@/lib/api";
+import { fetchProductById, fetchProducts } from "@/lib/api";
 
 interface Props {
   params: Promise<{ id: string }>;
 }
+export async function generateStaticParams() {
+  const products = await fetchProducts();
 
+  return products.map((product) => ({
+    id: String(product.id),
+  }));
+}
 export default async function ProductDetailsPage({ params }: Props) {
   const { id } = await params;
 
@@ -13,7 +19,8 @@ export default async function ProductDetailsPage({ params }: Props) {
 
   try {
     product = await fetchProductById(id);
-  } catch {
+  } catch (error) {
+    console.error("PRODUCTION ERROR:", error);
     notFound();
   }
 
